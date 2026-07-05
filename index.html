@@ -2,287 +2,338 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>RF & Microwave Design Challenge 2026</title>
-
+    <title>RF & Microwave Design Challenge</title>
+ 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-
+    <!-- ================= HEADER ================= -->
     <header>
-
         <nav class="navbar">
 
             <div class="logo">
-
                 <img src="images/sage_processed.jpg" alt="Shastry Associates Logo">
-
                 <span>SHASTRY ASSOCIATES GLOBAL ENTERPRISES</span>
-
             </div>
+ 
+            <!-- Mobile menu button -->
+            <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-            <ul class="nav-links">
-
+            <!-- Desktop / mobile nav -->
+            <ul class="nav-links" id="mobile-nav">
                 <li><a href="#about">About</a></li>
 
-                <li><a href="#timeline">Timeline</a></li>
+                <li class="dropdown">
+                    <a href="#topic">Challenge</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#topic">Challenge Topic</a></li>
+                        <li><a href="#specifications">Technical Specifications</a></li>
+                    </ul>
+                </li>
 
-                <li><a href="#prizes">Prizes</a></li>
+                <li class="dropdown">
+                    <a href="#timeline">Competition</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#timeline">Timeline</a></li>
+                        <li><a href="#deliverables">Deliverables</a></li>
+                        <li><a href="#evaluation">Evaluation Rubrics</a></li>
+                        <li><a href="#fabrication">Fabrication</a></li>
 
-                <li><a href="#rules">Rules</a></li>
+                    </ul>
+                </li>
 
                 <li><a href="#contact">Contact</a></li>
 
+                <li class="nav-register-item">
+                    <a href="YOUR_REGISTRATION_LINK" target="_blank" class="nav-register">Register</a>
+                </li>
             </ul>
 
         </nav>
-
     </header>
 
-
     <!-- ================= HERO ================= -->
-
     <section class="hero">
-
         <div class="hero-content">
 
-            <img src="images/sage_processed.jpg" class="hero-logo">
+            <img src="images/sage_processed.jpg" class="hero-logo" alt="Shastry Associates Logo">
 
-            <h3>SHASTRY ASSOCIATES GLOBAL ENTERPRISES</h3>
+            <h3>SHASTRY ASSOCIATES</h3>
 
-            <h1>RF & Microwave Design Challenge 2026</h1>
+            <h1>RF & Microwave Design Challenge:</h1>
+            <h2>High-Isolation Self-Diplexing Antenna for Wi-Fi 6</h2>
 
-            <p>
+            <p class="hero-tagline">
                 Design • Simulate • Fabricate • Validate
             </p>
 
-            <a href="YOUR_REGISTRATION_LINK">
-
-                <button class="register-btn">
-
-                    Register Now
-
-                </button>
-
+            <a href="YOUR_REGISTRATION_LINK" target="_blank">
+                <button class="register-btn">Register Now</button>
             </a>
 
         </div>
-
     </section>
-
 
     <!-- ================= ABOUT ================= -->
-
     <section id="about" class="section">
-
-        <h2>About the Competition</h2>
+        <h2>About the Challenge</h2>
 
         <p>
-
-            The RF & Microwave Design Challenge is designed to bridge
-            academic learning with industrial research and development.
-
-            Participants will progress from simulation to fabrication,
-            gaining practical experience in designing high-frequency
-            RF systems while following an industry-inspired development
-            workflow.
-
+            The RF & Microwave Design Challenge is designed to bridge academic learning with industry-style RF product development. Participants will work through the full engineering cycle of concept development, electromagnetic simulation, fabrication, testing, and validation.
         </p>
 
+        <p style="margin-top: 20px;">
+            The challenge emphasizes predictive engineering—rewarding teams that not only build a working RF system, but also accurately correlate measured hardware performance with simulated results. The 2026 challenge focuses on the design and validation of a <strong>high-isolation self-diplexing antenna for Wi-Fi 6 applications</strong>, requiring participants to create a compact dual-band planar antenna capable of separating the 2.45 GHz and 5.825 GHz Wi-Fi bands into dedicated physical channels.
+        </p>
     </section>
 
+    <!-- ================= CHALLENGE TOPIC ================= -->
+    <section id="topic" class="section">
+        <h2>Challenge Topic</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Project Theme</h3>
+                <p>
+                    Design and validation of a high-isolation self-diplexing antenna for Wi-Fi 6 applications.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>System Architecture</h3>
+                <p>
+                    A single-radiator, dual-port planar self-diplexing antenna that separates the two primary Wi-Fi 6 operating bands into dedicated physical channels without relying on external diplexer or filter hardware.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Band Allocation</h3>
+                <p>
+                    <strong>Port 1:</strong> 2.45 GHz ISM band<br>
+                    <strong>Port 2:</strong> 5.825 GHz UNII band
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Feed Architectures</h3>
+                <p>
+                    Participants may use integrated planar microstrip, CPW, slot-line, or coaxial probe feed excitation architectures optimized for mutual decoupling and high isolation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SPECIFICATIONS ================= -->
+    <section id="specifications" class="section">
+        <h2>Technical Specifications</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Electrical & RF Targets</h3>
+                <ul>
+                    <li>Port 1 centered around <strong>2.45 GHz</strong></li>
+                    <li>Port 2 centered around <strong>5.825 GHz</strong></li>
+                    <li>Operating bandwidth of <strong>at least 100 MHz</strong> for each band</li>
+                    <li>Strong impedance matching and high port-to-port isolation</li>
+                    <li>Target peak gain at boresight radiation angle</li>
+                    <li>Standard <strong>50 Ω RF termination</strong></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Mechanical & Material Constraints</h3>
+                <ul>
+                    <li>Maximum physical board area: <strong>≤ 25 cm²</strong></li>
+                    <li>Substrate material: <strong>FR-4</strong></li>
+                    <li>Permitted FR-4 thicknesses include 0.8 mm, 1 mm, 1.2 mm, or 1.6 mm</li>
+                    <li>Connector type: <strong>2 × high-frequency PCB SMA female connectors</strong></li>
+                    <li>Copper thickness: <strong>35 µm or 18 µm</strong></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Simulation Tool Constraints</h3>
+                <ul>
+                    <li>Approved tools include HFSS, CST, ADS, AWR, FEKO, and equivalent 3D EM suites</li>
+                    <li>Only academic, research, or student licenses are permitted</li>
+                    <li>Teams must clearly mention software package, version, and license tier in the report</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Manufacturing & Verification Tolerances</h3>
+                <ul>
+                    <li>Dimensional tolerance target: <strong>±0.5 mm</strong></li>
+                    <li>Substrate permittivity variation: <strong>Δεr = ±0.1</strong></li>
+                    <li>Target Sim-to-Meas delta:
+                        <strong>≤ 5% frequency shift</strong> and
+                        <strong>≤ 3 dB isolation degradation</strong>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
 
     <!-- ================= TIMELINE ================= -->
-
     <section id="timeline" class="section">
-
         <h2>Competition Timeline</h2>
 
         <div class="timeline">
 
             <div class="timeline-card">
-
                 <h3>Phase 1</h3>
-
                 <h4>Design & Simulation</h4>
-
-                <p>Months 1 - 2</p>
-
+                <p><strong>Months 1–2</strong></p>
+                <ul>
+                    <li>Understand the engineering challenge and antenna architecture</li>
+                    <li>Select the design topology and feeding strategy</li>
+                    <li>Perform full-wave EM simulations and optimization</li>
+                    <li>Generate S-parameter plots, radiation patterns, Smith charts, and design files</li>
+                </ul>
             </div>
 
             <div class="timeline-card">
-
                 <h3>Phase 2</h3>
-
                 <h4>Fabrication & Testing</h4>
-
-                <p>Months 3 - 5</p>
-
+                <p><strong>Months 3–5</strong></p>
+                <ul>
+                    <li>Fabricate the board using PCB prototyping facilities</li>
+                    <li>Mount SMA connectors and complete antenna assembly</li>
+                    <li>Validate the prototype using a calibrated VNA</li>
+                    <li>Compare simulated and measured RF performance</li>
+                </ul>
             </div>
 
         </div>
-
     </section>
 
-
-    <!-- ================= PRIZES ================= -->
-
-    <section id="prizes" class="section">
-
-        <h2>Prize Pool</h2>
+    <!-- ================= DELIVERABLES ================= -->
+    <section id="deliverables" class="section">
+        <h2>Deliverables</h2>
 
         <div class="cards">
 
             <div class="card">
-
-                <h3>🥇 Winner</h3>
-
-                <p>₹ XX,XXX</p>
-
+                <h3>Phase 1 Deliverables</h3>
+                <ul>
+                    <li>Detailed simulation report</li>
+                    <li>Optimized antenna geometry and port definitions</li>
+                    <li>S-parameters, Smith charts, and gain/radiation plots</li>
+                    <li>Manufacturing-ready Gerber and drill files</li>
+                    <li>Declared simulation software, version, and license type</li>
+                </ul>
             </div>
 
             <div class="card">
-
-                <h3>🥈 Runner Up</h3>
-
-                <p>₹ XX,XXX</p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>🏅 Innovation Award</h3>
-
-                <p>₹ XX,XXX</p>
-
+                <h3>Phase 2 Deliverables</h3>
+                <ul>
+                    <li>Bill of Materials (BOM)</li>
+                    <li>Fabrication log and assembly notes</li>
+                    <li>Raw and processed VNA measurement data</li>
+                    <li>Simulated vs measured overlay plots</li>
+                    <li>Deviation analysis and engineering justification</li>
+                </ul>
             </div>
 
         </div>
-
     </section>
-
-
-    <!-- ================= RULES ================= -->
-
-    <section id="rules" class="section">
-
-        <h2>Rules & Guidelines</h2>
-
-        <ul>
-
-            <li>Team participation only.</li>
-
-            <li>Simulation report submission is mandatory.</li>
-
-            <li>Fabrication must follow the prescribed specifications.</li>
-
-            <li>Final evaluation will include practical testing.</li>
-
-        </ul>
-
-    </section>
-
 
     <!-- ================= EVALUATION ================= -->
-
-    <section class="section">
-
-        <h2>Evaluation Criteria</h2>
+    <section id="evaluation" class="section">
+        <h2>Evaluation Rubrics</h2>
 
         <div class="cards">
 
             <div class="card">
-
-                <h3>40%</h3>
-
-                <p>RF Performance</p>
-
+                <h3>40% — Defense, Craftsmanship & Novelty</h3>
+                <ul>
+                    <li>Design novelty and innovation</li>
+                    <li>Soldering precision and joint quality</li>
+                    <li>Mechanical alignment and drilling accuracy</li>
+                    <li>Jury Q&A technical defense</li>
+                </ul>
             </div>
 
             <div class="card">
-
-                <h3>30%</h3>
-
-                <p>Simulation Accuracy</p>
-
+                <h3>20% — RF Performance</h3>
+                <ul>
+                    <li>Impedance matching (S11 / S22)</li>
+                    <li>Self-diplexing isolation (S21 / S12)</li>
+                    <li>Far-field radiation peak gain</li>
+                </ul>
             </div>
 
             <div class="card">
-
-                <h3>20%</h3>
-
-                <p>Documentation</p>
-
+                <h3>20% — Sim-to-Meas Correlation</h3>
+                <ul>
+                    <li>Frequency shift delta (Δf)</li>
+                    <li>Isolation trace correlation (ΔS21)</li>
+                    <li>Root-cause deviation analysis</li>
+                </ul>
             </div>
 
             <div class="card">
-
-                <h3>10%</h3>
-
-                <p>Defense & Craftsmanship</p>
-
+                <h3>20% — Technical Documentation</h3>
+                <ul>
+                    <li>Simulation report and Gerber completeness</li>
+                    <li>Fabrication, testing, and BOM report quality</li>
+                    <li>Clarity of plots, overlays, and engineering documentation</li>
+                </ul>
             </div>
 
         </div>
-
     </section>
-
 
     <!-- ================= FABRICATION ================= -->
-
-    <section class="section">
-
-        <h2>Fabrication Details</h2>
+    <section id="fabrication" class="section">
+        <h2>Fabrication & Verification</h2>
 
         <p>
-
-            Details regarding PCB fabrication,
-            approved manufacturing process,
-            and substrate specifications
-            will be shared after registration.
-
+            Teams are expected to physically realize their antenna designs using standard PCB prototyping workflows such as milling, etching, drilling, and connector mounting. Particular emphasis will be placed on board precision, SMA mounting quality, alignment, soldering cleanliness, and robustness against practical manufacturing tolerances.
         </p>
 
+        <p style="margin-top: 20px;">
+            Final validation will be carried out using calibrated VNA measurements, and teams will be expected to explain the correlation between their simulated and measured performance. Successful entries will demonstrate both strong RF behavior and strong engineering control over fabrication variability.
+        </p>
     </section>
-
 
     <!-- ================= CONTACT ================= -->
-
     <section id="contact" class="section">
-
         <h2>Contact Us</h2>
 
-        <p>Email</p>
+        <div class="cards">
+            <div class="card">
+                <h3>Email</h3>
+                <p>your-email@example.com</p>
+            </div>
 
-        <p>Phone</p>
-
-        <p>Address</p>
-
+            <div class="card">
+                <h3>Phone</h3>
+                <p>+91 XXXXX XXXXX</p>
+            </div>
+        </div>
     </section>
 
-
     <!-- ================= FOOTER ================= -->
-
     <footer>
-
-        © 2026 Shastry Associates
-
+        © 2026 Shastry Associates. All rights reserved.
     </footer>
-
 
     <script src="script.js"></script>
 
