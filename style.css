@@ -221,21 +221,27 @@ header{
 }
 
 .hero-content{
-    max-width:1000px;
+    max-width:1300px;
+    width:100%;
     opacity:0;
     transform:translateY(40px);
     transition:all 1.2s ease;
 }
+.hero-presents{
+    font-size:22px;
+    color:var(--grey);
+    margin-bottom:15px;
+}
 
 .hero-logo{
-    width:140px;
-    margin-bottom:25px;
+    width:120px;
+    margin-bottom:20px;
 }
 
 .hero h3{
     color:var(--blue);
     letter-spacing:3px;
-    font-size:18px;
+    font-size:25px;
     margin-bottom:20px;
 }
 
@@ -243,7 +249,7 @@ header{
     font-size:58px;
     font-weight:800;
     line-height:1.15;
-    margin-bottom:25px;
+    margin-bottom:18px;
 }
 
 .hero-tagline{
