@@ -218,3 +218,47 @@ window.addEventListener("resize", () => {
         dropdownItems.forEach((item) => item.classList.remove("open"));
     }
 });
+
+
+/* ==========================================
+   COUNTDOWN TIMER
+========================================== */
+
+const deadline = new Date("July 24, 2026 18:00:00 GMT+0530").getTime();
+
+const timer = setInterval(function () {
+
+    const now = new Date().getTime();
+    const distance = deadline - now;
+
+    if (distance <= 0) {
+
+        clearInterval(timer);
+
+        document.getElementById("countdown").innerHTML =
+            "<h3 style='color:#FC6C32;'>Registrations Closed</h3>";
+
+        return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60));
+
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) /
+        (1000 * 60));
+
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    document.getElementById("nav-days").textContent = days;
+    document.getElementById("nav-hours").textContent = hours;
+    document.getElementById("nav-minutes").textContent = minutes;
+    document.getElementById("nav-seconds").textContent = seconds;
+
+}, 1000);

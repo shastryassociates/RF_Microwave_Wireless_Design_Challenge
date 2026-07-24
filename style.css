@@ -217,7 +217,7 @@ header{
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:120px 30px;
+    padding:70px 30px 80px;
 }
 
 .hero-content{
@@ -653,5 +653,124 @@ body::before{
         bottom:18px;
         width:46px;
         height:46px;
+    }
+}
+
+/* ==========================================
+   REGISTRATION COUNTDOWN
+========================================== */
+
+.registration-deadline{
+    margin-top:28px;
+    text-align:center;
+}
+
+.registration-deadline p{
+    color:var(--orange);
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:22px;
+}
+
+.registration-deadline span{
+    color:var(--blue);
+}
+
+#countdown{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.time-box{
+    width:90px;
+    padding:15px;
+    border:1px solid var(--border);
+    border-top:4px solid var(--orange);
+    border-radius:12px;
+    background:white;
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+.time-box span{
+    display:block;
+    font-size:32px;
+    font-weight:700;
+    color:var(--blue);
+}
+
+.time-box small{
+    display:block;
+    margin-top:6px;
+    font-size:13px;
+    color:var(--grey);
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+@media(max-width:768px){
+
+    #countdown{
+        gap:12px;
+    }
+
+    .time-box{
+        width:75px;
+        padding:12px;
+    }
+
+    .time-box span{
+        font-size:26px;
+    }
+}
+/* ==========================================
+   TOP COUNTDOWN BAR
+========================================== */
+
+.top-countdown{
+
+    background: var(--orange);
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+
+    padding:10px 20px;
+
+    font-size:15px;
+    font-weight:600;
+
+    margin-top:78px;      /* navbar height */
+}
+
+.mini-timer{
+
+    font-size:18px;
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+.mini-timer span{
+    color:#fff;
+}
+
+@media(max-width:768px){
+
+    .top-countdown{
+
+        flex-direction:column;
+        gap:4px;
+
+        text-align:center;
+        padding:10px;
+    }
+
+    .mini-timer{
+
+        font-size:16px;
     }
 }
